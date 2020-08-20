@@ -4,8 +4,6 @@ $(document).ready(function(){
     initDOM_cookie();
     init_cookie();
     eventBinding_cookie();
-    
-
 });
 
 var cookieData_arr;  

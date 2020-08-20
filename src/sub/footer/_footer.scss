@@ -1,0 +1,131 @@
+#footer_sub {
+    width: 100%;
+    padding: 40px 0 45px;
+    background: #151515;
+  
+    .inner {
+      position: relative;
+      width: 1180px;
+      margin: 0 auto;
+  
+      h1 {
+        font: 28px/1 'Dancing Script', cursive;
+        color: #d8d8d8;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+      }
+  
+      .wrap {
+        width: 100%;
+  
+        .footerLeft {
+          float: left;
+          width: 70%;
+          box-sizing: border-box;
+  
+          h2 {
+            font: bold 13px/1 'arial';
+            color: #757575;
+            margin-bottom: 5px;
+            margin-top: 13px;
+            letter-spacing: 1px;
+  
+            &:nth-of-type(2) {
+              margin-top: 25px;
+            }
+          }
+  
+          p {
+            font: 13px/1.4 'arial';
+            color: #777;
+            letter-spacing: 2px;
+  
+            i {
+              font-size: 12px;
+            }
+          }
+  
+          strong {
+            display: block;
+            font: 14px/1 'arial';
+            color: #666;
+            margin-top: 20px;
+          }
+        }
+  
+        .footerRight {
+          float: right;
+          width: 20%;
+          box-sizing: border-box;
+  
+          .snsBox {
+            margin-top: 13px;
+            margin-bottom: 30px;
+  
+            i {
+              font-size: 20px;
+              color: #757575;
+              margin-right: 20px;
+              cursor: pointer;
+  
+              &:hover {
+                color: #fff;
+              }
+            }
+          }
+  
+          label {
+            display: block;
+            font: 12px/1 'arial';
+            color: #777;
+            margin-bottom: 5px;
+            padding-left: 5px;
+          }
+  
+          select {
+            width: 120px;
+            color: #777;
+            background: #232323;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet){
+    #footer_sub {
+        padding: 40px 30px 45px;
+        box-sizing: border-box;
+      
+        .inner {
+          width: 100%;
+      
+          .wrap {
+            .footerLeft {
+              width: 100%;
+            }
+      
+            .footerRight {
+              width: 100%;
+      
+              .snsBox {
+                margin-top: 30px;
+              }
+            }
+          }
+        }
+      }
+}
+
+
+@media screen and (max-width: $mobile){
+    #footer_sub .inner {
+        width: 100%;
+        padding-left: 20px;
+        box-sizing: border-box;
+      
+        .select {
+          display: none;
+        }
+      }
+}

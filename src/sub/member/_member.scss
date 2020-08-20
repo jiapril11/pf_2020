@@ -1,0 +1,264 @@
+/* Members */
+
+.red {background:rgb(255, 226, 231)!important;}
+
+.members {
+    .sub_visual {
+      background: url(./../img/mem.jpeg) no-repeat 50% 135%;
+      background-size: cover;
+      background-attachment: fixed;
+      filter:grayscale(1);
+      transition: 0.5s;
+
+      &:hover{
+        filter: grayscale(0);
+      }
+    }
+  
+    .agreement {
+      margin-bottom: 60px;
+      width: 100%;
+      background: #f7f7f7;
+      padding: 60px 20px;
+      box-sizing: border-box;
+
+      &::after{content: ''; clear: both; display: block;}
+
+      >div{
+        width: 48%; float: left;
+
+        &.essential{
+          margin-right: 4%;
+
+          h2 > span{
+            color: #ed4646;
+          }
+        }
+
+        h2 {
+          font: bold 17px/1 'arial';
+          color: #555;
+          margin-bottom: 20px;
+          min-height: 36px;
+
+          span{
+            font-size: 14px;
+          }
+        }
+    
+        textarea {
+          width: 100%;
+          height: 200px;
+          box-sizing: border-box;
+          padding: 20px;
+          margin-bottom: 10px;
+          font: 15px/1.8 'arial';
+          color: #777;
+        }
+    
+        input {
+          margin-left: 10px;
+        }
+    
+        label {
+          font-size: 11px;
+          color: #888;
+        }
+      }
+
+      
+    }//agreement
+  
+    h2 {
+      font: bold 20px/1 'arial';
+      color: #555;
+      margin-bottom: 30px;
+
+      >span{
+        font: 11px 'arial';
+        color: #777;
+      }
+    }
+
+    table {
+      width: 100%;
+  
+      tr {
+        &:nth-of-type(1) {
+          border-top: 2px solid #000;
+        }
+  
+        &:last-child {
+          border-bottom: 2px solid #000;
+  
+          td {
+            text-align: center;padding: 40px 40px;
+          }
+        }
+      }
+  
+      th {
+        width: 20%;
+        border-bottom: 1px solid #ddd;
+        padding: 20px 40px;
+        text-align: left;
+        color: #666;
+        border-right: 1px solid #ddd;
+      }
+  
+      td {
+        width: 80%;
+        border-bottom: 1px solid #ddd;
+        padding: 20px 40px;
+        text-align: left;
+      }
+  
+      input {
+        &[type=text], &[type=password] {
+          width: 30%;
+          height: 30px;
+          padding: 0 20px;
+          padding-right: 0;
+          background: rgba(0, 0, 0, 0.03);
+          border: 1px solid #aaa;
+          transition: 0.5s;
+        }
+
+        &#birthyear{
+          width: 15%;
+        }
+        &#birthday{
+          width: 10%;
+        }
+
+        &[name=mobile]{
+          width: 20%;
+        }
+      }
+  
+      select {
+        width: 30%;
+        height: 30px;
+        padding: 0 20px;
+        padding-right: 0;
+        background: rgba(0, 0, 0, 0.03);
+        border: 1px solid #aaa;
+        transition: 0.5s;
+
+        &#birthmonth{
+          width: 10%;
+        }
+      }
+  
+      input {
+        &[type=text]:hover, &[type=password]:hover {
+          background-color: #ffffe6;
+        }
+      }
+  
+      select:hover {
+        background-color: #ffffe6;
+      }
+  
+      input {
+        &[type=text]:focus, &[type=password]:focus {
+          background-color: #ffffe6;
+        }
+      }
+  
+      select:focus {
+        background-color: #ffffe6;
+      }
+  
+      input {
+        &[type=text]::-webkit-input-placeholder, &[type=password]::-webkit-input-placeholder {
+          color: #aaa;
+        }
+      }
+  
+      select::-webkit-input-placeholder {
+        color: #aaa;
+      }
+  
+      input {
+        &[type=submit], &[type=reset] {
+          width: 120px;
+          height: 40px;
+          border-radius: 20px;
+          font: bold 12px/40px 'arial';
+          color: #666;
+          margin: 0 10px;
+          cursor: pointer;
+          border: 1px solid #888;
+          background: transparent;
+          transition: 0.5s;
+        }
+  
+        &[type=submit]:hover, &[type=reset]:hover {
+          background: rgb(253, 207, 0);;
+          border-color: rgb(253, 207, 0);;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+          color: #fff;
+          font-weight: bold;
+        }
+      }
+  
+      label {
+        margin-right: 20px;
+      }
+
+    }
+  }
+  
+  @media screen and (max-width: $tablet) {
+    .members table {
+      th {
+        display: none;
+      }
+  
+      td {
+        width: 100%;
+  
+        input {
+          &[type=text], &[type=password] {
+            width: 100%;
+          }
+
+          &#birthyear{
+            width: 30%;
+          }
+          &#birthday{
+            width: 30%;
+          }
+  
+          &[name=mobile]{
+            width: 30%;
+          }
+        }
+  
+        select {
+          width: 100%;
+
+          &#birthmonth{
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+  
+  /* mobile */
+  @media screen and (max-width: $mobile) {
+    .members {
+      td label {
+        margin-right: 7px;
+      }
+  
+      table input {
+        &[type=submit], &[type=reset] {
+          width: 80px;
+          margin: 0 15px;
+        }
+      }
+    }
+  }

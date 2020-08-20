@@ -1,0 +1,130 @@
+<include src="../header/header.html"></include>
+
+<section class="content members">
+    <div class="sub_visual"></div>
+    <div class="inner">
+        <h1>Members</h1>
+
+        <form action="/" id="join">
+            <fieldset>
+                <legend class="hidden">회원가입</legend>
+
+                <div class="agreement">
+                    <div class="essential">
+                        <h2><span>[필수]</span> 이용약관 동의</h2>
+                        <textarea readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime asperiores exercitationem, ipsum adipisci harum accusantium, ut sed explicabo nihil aliquid dolor, nulla earum error deleniti omnis. Excepturi quibusdam maiores autem architecto atque incidunt nostrum, voluptate maxime eaque. Ipsum hic a, quaerat in alias ratione voluptate iusto architecto delectus. Unde, ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit a facere explicabo temporibus cumque corrupti expedita earum quae, veniam doloribus assumenda? Et nam dolorum voluptatum, temporibus maxime voluptate, sed neque ratione enim eum tempora mollitia blanditiis ullam incidunt praesentium suscipit reprehenderit pariatur placeat ea doloremque similique sint dolores! Mollitia, eius? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum quos rerum minus vitae quisquam blanditiis animi, officiis autem quibusdam doloremque repellat, error, cum sint aliquam dolores voluptate veniam voluptatum fugit quaerat quidem atque necessitatibus consequuntur! Culpa iure error necessitatibus eos?</textarea>
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">위의 내용을 읽어 보았으며 동의합니다.</label>
+                    </div>
+                    <div class="optional">
+                        <h2><span>[선택]</span> 개인정보 수집 및 이용 동의</h2>
+                        <textarea readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime asperiores exercitationem, ipsum adipisci harum accusantium, ut sed explicabo nihil aliquid dolor, nulla earum error deleniti omnis. Excepturi quibusdam maiores autem architecto atque incidunt nostrum, voluptate maxime eaque. Ipsum hic a, quaerat in alias ratione voluptate iusto architecto delectus. Unde, ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit a facere explicabo temporibus cumque corrupti expedita earum quae, veniam doloribus assumenda? Et nam dolorum voluptatum, temporibus maxime voluptate, sed neque ratione enim eum tempora mollitia blanditiis ullam incidunt praesentium suscipit reprehenderit pariatur placeat ea doloremque similique sint dolores! Mollitia, eius? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum quos rerum minus vitae quisquam blanditiis animi, officiis autem quibusdam doloremque repellat, error, cum sint aliquam dolores voluptate veniam voluptatum fugit quaerat quidem atque necessitatibus consequuntur! Culpa iure error necessitatibus eos?</textarea>
+                        <input type="checkbox" id="optional_terms" name="optional_temrs">
+                        <label for="optional_temrs">위의 내용을 읽어 보았으며 동의합니다.</label>
+                    </div>
+                    
+                </div>
+
+                <h2>회원정보 <span> ( * 필수 입력사항 )</span></h2>
+                <table>
+                    <caption class="hidden">회원정보</caption>
+                    <tr>
+                        <th>
+                            <label for="userid">아이디 *</label>
+                        </th>
+                        <td><input type="text" id="userid" name="userid" placeholder="아이디를 입력하세요" class="required"></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="pwd">비밀번호 *</label>
+                        </th>
+                        <td><input type="password" id="pwd" name="pwd" placeholder="패스워드를 입력하세요" class="required"></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="pwd2">비밀번호 재확인 *</label>
+                        </th>
+                        <td><input type="password" id="pwd2" name="pwd2" placeholder="패스워드를 재입력하세요" class="required"></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="email">이메일 *</label>
+                        </th>
+                        <td>
+                            <input type="text" id="email" name="email" placeholder="이메일 아이디를 입력하세요" class="required">
+                            @
+                            <select name="domain" id="domain">
+                                <option value="naver.com" selected>naver.com</option>
+                                <option value="hanmail.net">hanmail.net</option>
+                                <option value="gmail.com">google.com</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="username">이름 *</label>
+                        </th>
+                        <td>
+                            <input type="text" id="username" name="username" placeholder="이름을 입력하세요" class="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="gender">성별</label>
+                        </th>
+                        <td>
+                            <input type="radio" id="female" name="gender" value='female'>
+                            <label for="female">여성</label>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">남성</label>
+                            <input type="radio" id="nonesex" name="gender" value='nonesex'>
+                            <label for="nonesex">선택안함</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="birthdate">생년월일</label>
+                        </th>
+                        <td>
+                            <input type="text" id="birthyear" name="birthyear" placeholder="예)1995" numberOnly>
+                            <select name="birthmonth" id="birthmonth">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <input type="text" id="birthday" name="birthday" placeholder="일" numberOnly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="mobile">휴대폰 번호</label></th>
+                        <td>
+                            <input type="text" id="mobile1" name="mobile" placeholder="010" numberOnly>
+                            <input type="text" id="mobile2" name="mobile" placeholder="1234" numberOnly>
+                            <input type="text" id="mobile3" name="mobile" placeholder="5678" numberOnly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="reset" value="RESET">
+                            <input type="submit" value="SEND">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</section>
+
+<script src="js/sub/member/member.min.js"></script>
+
+<include src="../info/info.html"></include>
+<include src="../footer/footer.html"></include>

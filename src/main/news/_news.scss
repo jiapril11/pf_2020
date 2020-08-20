@@ -1,0 +1,94 @@
+#news{
+    width: 100%; padding: 180px 0 90px;  transition: 0.5s;
+
+    .inner{
+        width: 1180px; margin: 0 auto;
+
+        h1{
+            font: 700 30px/1 'Playfair Display', serif; color: #444; letter-spacing: 1px; margin-bottom: 40px;
+
+            span{
+                display: block; font:bold 14px/1 'arial'; color: orangered; margin-top: 10px;
+            }
+        }
+
+        article{
+            float: left; width: 280px; margin-right: 20px;
+
+            &:nth-last-of-type(1){
+                margin-right: 0;
+            }
+            
+            .pic{
+                width: 100%; height: 140px; margin-bottom: 20px;
+            }
+
+            @for $i from 1 through 4{
+                &:nth-of-type(#{$i}) .pic{background: url(./../img/news#{$i}.jpg) no-repeat; background-size: cover;}
+            }
+
+            h2 >a {
+                display: block; font: bold 16px/1 'arial'; color: #555; margin-bottom: 7px;
+            }
+
+            p{
+                font: 12px/1 'arial'; color: #777;
+            }
+        }//article
+    }//inner
+}//news
+
+
+    @media screen and (max-width: $tablet){
+        #news {
+            padding: 90px 20px 90px;
+            box-sizing: border-box;
+          
+            .inner {
+              width: 100%;
+          
+              h1 {
+                font: bold 5vw/1 'Playfair Display', serif;
+              }
+          
+              article {
+                float: left;
+                width: 49%;
+                margin-right: 2%;
+                margin-bottom: 3%;
+          
+                &:nth-of-type(2n) {
+                  margin-right: 0;
+                }
+          
+                .pic {
+                  width: 100%;
+                  height: 250px;
+                }
+              }
+            }
+          }
+    }
+    
+    
+    @media screen and (max-width: $mobile){
+        #news .inner {
+            h1 {
+              font: bold 6vw/1 'Playfair Display', serif;
+            }
+          
+            article {
+              width: 100%;
+              margin-right: 0;
+              margin-bottom: 20px;
+          
+              .pic {
+                width: 100%;
+                height: 250px;
+                margin-bottom: 10px;
+              }
+            }
+          }
+    }
+    
+    

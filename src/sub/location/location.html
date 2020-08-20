@@ -1,0 +1,46 @@
+<include src="../header/header.html"></include>
+
+<section class="content location">
+    <div class="sub_visual"></div>
+    <div class="inner">
+        <h1>Location</h1>
+        <div id="map"></div>
+
+        <!-- <div class="btnWrap">
+        </div> -->
+
+        <ul id="traffic">
+            <li id="t_on">교통정보량 보기</li>
+            <li id="t_off" class="on">교통정보량 숨기기</li>
+        </ul>
+
+        <table id="branch">
+            <caption class="hidden">본점, 농장 정보</caption>
+            <tbody>
+                <tr>
+                    <th rowspan="2" id="branch1" class="on">본사</th>
+                    <td>주소: 서울특별시 종로구 세종로 사직로</td>
+                </tr>
+                <tr>
+                    <td>전화번호: 02-0000-1111</td>
+                </tr>
+                
+                <tr>
+                    <th rowspan="2" id="branch2">농장</th>
+                    <td>주소: 제주시 오라삼동 87-9</td>
+                </tr>
+                <tr>
+                    <td>전화번호: 064-1111-2222</td>
+                </tr>
+            </tbody>
+        </table>
+        
+
+    </div>
+</section>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7713e4925f280bf97ce7cf93704cbce9"></script> 
+<script src="js/sub/location/location.min.js"></script>
+
+<include src="../info/info.html"></include>
+<include src="../footer/footer.html"></include>

@@ -1,0 +1,51 @@
+aside#cookie{
+    position: absolute; top: 0;left: 0; background: #444; width: 100%; height: 60px; z-index: 3; 
+
+    .inner{
+        width: 1180px; margin: 0 auto; padding: 30px 0; position: relative;
+
+        p{
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font: bold 18px/1 'arial'; color: #fff; letter-spacing: 3px;
+        }
+
+        .inputBox{
+            position: absolute; top: 50%; right: 0; transform: translateY(-50%);
+
+            input{color: #aaa;}
+            label{font: 14px/1 '고딕'; color: #aaa; margin-right: 20px;}
+            .clx_ck{font: bold 17px/1 '고딕'; color: #acacac;}
+        }
+    }
+}
+
+@media screen and (max-width: $tablet){
+    aside#cookie{
+        
+    
+        .inner{
+            width: 100%;
+
+            p{
+                top: 50%; left: 20px; transform: translate(0, -50%); 
+            }
+    
+            .inputBox{
+               top: 50%; right: 20px; transform: translateY(-50%);
+    
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: $mobile){
+    aside#cookie{
+        .inner{
+            p{font-size: 16px; top: 35%;}
+            .inputBox{
+                top: 71%;
+                label{margin-right: 5px;}
+            }
+        }
+    }
+}
+

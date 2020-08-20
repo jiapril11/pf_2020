@@ -1,0 +1,171 @@
+.department {
+    .sub_visual {
+      background: url(./../img/dep.jpeg) no-repeat 50% 93%/cover; background-attachment: fixed;
+      position: relative; filter: grayscale(1); transition:0.5s;
+
+      &:hover{
+        filter: grayscale(0);
+      }
+    }
+    
+    .inner{
+
+      h1{
+        font: bold 38px/1 'Playfair display'; color: #444; 
+
+        &::before{
+          width: 240px;
+        }
+      }
+
+      .division{
+        width: 100%; height: 620px; padding-top: 50px;
+        position: relative;
+
+        .division_wrap{
+          width: 100%; height: 100%; 
+
+          &::after{
+            content: ''; display: block; clear: both;
+          }
+
+          .d_left{
+            float: left; width: 55%; height: 100%; background: url(./../img/dep.png) no-repeat center; background-size: contain;
+          }
+          .d_right{
+            float: right; width: 40%; height: 100%; padding: 20px; box-sizing: border-box; position: relative; background: #f8f8f8; box-shadow: 6px 6px 12px rgba(0,0,0,0.1); border-radius: 15px;
+
+            h2{
+              font:bold 20px/1 'arial'; color: #444; margin-bottom: 20px;
+            }   
+            
+            p{
+              font: 16px/1.4 'arial'; color: #555; letter-spacing: 1px; margin: 10px 0; text-indent: 5px;
+            }
+
+          span{
+            position: absolute; display: block; bottom: 50px; left: 40px; font: 14px/1 'arial'; color: #444;
+          }
+
+          img{
+            position: absolute; bottom:0; right: 0;
+          }
+
+          }
+
+        }
+        
+
+        ul{
+          display: none;
+        }
+      }
+
+    }  
+}
+
+    @media screen and (max-width: $tablet){
+      $ht: 50px; $gap: 20px;
+
+        .department {
+          
+          .inner{
+            width: 100%;
+            
+            .division{
+              height: auto;
+
+              .division_wrap{// background: none;
+              display: none;
+               
+              }
+
+              ul{
+                display: block;
+                // position: relative; top: 0px; opacity: 1;
+                li{
+                  //1depth
+                  span{
+                    display: block; width: 40%; height: $ht; background: #444; color: #fff; text-align: center; font-size: 16px; line-height: $ht; font-family: '맑은 고딕'; margin: $gap; border-radius: 30px; position: relative;
+
+                    &::after{
+                      content: ''; display: block; position: absolute; top: $ht; left: 20px; width: 1px; height: (($ht+$gap) * 12) - ($ht/2); background: #aaa; 
+                    }
+                  }
+
+                  ul{
+                    li{
+                      //2depth
+                      span{
+                        background: #777; transform: translateX(50px);
+
+                        &::before{
+                          content: ''; display: block; width: 30px; height: 1px; background: #aaa; position: absolute; top: $ht/2; left: -30px;
+                        }
+                      }
+                      ul{
+                        li{
+                          //3depth
+                          span{
+                            background: #999; transform: translateX(100px);
+
+                            &:after{display: none;}
+                          }
+                        }
+                      }
+
+                      &:nth-of-type(1) span::after{ height: (($ht+$gap) * 1) - ($ht/2);}
+                      &:nth-of-type(2) span::after{ height: (($ht+$gap) * 2) - ($ht/2);}
+                      &:nth-of-type(3) span::after{ height: (($ht+$gap) * 2) - ($ht/2);}
+                      &:nth-of-type(4) span::after{ height: (($ht+$gap) * 2) - ($ht/2);}
+                      &:nth-of-type(5) span::after{ height: (($ht+$gap) * 1) - ($ht/2);}
+                    }
+                  }
+
+                }
+              }
+
+            }
+      
+          }  
+      }
+    }
+
+    @media screen and (max-width: $mobile){
+      .department {
+          
+        .inner{
+        
+          .division{
+    
+            ul{
+              width: 100%;
+              li{
+                span{
+                  width: 60%;
+                }
+
+                ul{
+                  li{
+                    span{
+                      //  transform: translateX(15%);
+                    }
+                    ul{
+                      li{
+                        span{
+                          // transform: translateX(30%);
+                        }
+                      }
+                    }
+                  }
+                }
+
+              }
+            }
+
+          }
+    
+        }  
+    }
+    }
+
